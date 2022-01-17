@@ -88,7 +88,7 @@ class CustomLinked {
     nodes.forEach((v) => {
       const nextNode = this.get(v.code);
       if (!nextNode) return temp;
-      if (temp.find((t) => t.code == v.code)) return temp;
+      if (temp.find((t) => t.code == nextNode.code)) return temp;
       temp.push(nextNode);
       if (nextNode.next?.length) {
         return this.regretion(nextNode.next);
